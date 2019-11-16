@@ -1,15 +1,13 @@
+1. Navbar
+
+```html
 <!DOCTYPE html>
 <html>
 
 <head>
   <!--Import Google Icon Font-->
-
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/main.css" />
   <!--Let browser know website is optimized for mobile-->
@@ -18,7 +16,7 @@
   <title>Custom Materialize Theme</title>
 </head>
 
-<body id="home" class="scrollspy">
+<body>
 
 <div class="navbar-fixed">
   <nav class="teal">
@@ -53,6 +51,26 @@
   </ul>
 
 
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Custom JS & jQuery here
+      $('.button-collapse').sideNav();
+      
+    });
+  </script>
+</body>
+
+</html>
+```
+
+
+2. Slider
+
+```html
+
 <!--    section slider-->
 
     <section class="slider">
@@ -86,7 +104,35 @@
     </section>
 
 
-    <section   id="search" class="section section-search teal darken-1 white-text center scrollspy">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Custom JS & jQuery here
+    // INIT NAV
+      $('.button-collapse').sideNav();
+
+
+      //INIT SLIDER
+
+      $('.slider').slider({
+        indicators:false,
+        height:500,
+        transition:500,
+        interval:5500
+      })
+    });
+  </script>
+```
+
+
+
+
+3. Search
+
+```html
+    <section class="section section-search teal darken-1 white-text center">
       <div class="container">
         <div class="row">
           <div class="s12">
@@ -98,6 +144,51 @@
         </div>
       </div>
     </section>
+
+
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Custom JS & jQuery here
+    // INIT NAV
+      $('.button-collapse').sideNav();
+
+
+      //INIT SLIDER
+
+      $('.slider').slider({
+        indicators:false,
+        height:500,
+        transition:500,
+        interval:5500
+      })
+
+
+      $('.autocomplete').autocomplete({
+        data:{
+          "Aruba":null,
+          "Cancun Mexico":null,
+          "Hawaii":null,
+          "The bahamas":null,
+        }
+      });
+
+    });
+
+
+```
+
+
+
+
+4. Icon boxes
+
+```html
+
 
 <!--   Section icon boxes-->
 
@@ -136,10 +227,20 @@
     </div>
   </section>
 
+
+
+
+```
+
+
+
+5. Popular locations card with images
+
+
+```html
 <!--  Section :    Popular-->
 
-
-<div class="section section-popular srollspy" id="popular">
+<div class="section section-popular">
   <div class="container">
     <div class="row">
       <h4 class="center"><span class="teal-text">Popular</span> Place</h4>
@@ -198,6 +299,15 @@
 
 
 
+  
+```
+
+
+
+6. Section follow and image gallery
+
+```html
+
     <section class="section section-follow teal darken-2 white-text center">
         <div class="container">
           <div class="row">
@@ -231,7 +341,7 @@
 <!--  Section gallery-->
 
 
-  <div id="gallery" class="section section section-gallery scrollspy">
+  <div class="section section section-gallery">
         <div class="container">
              <h4 class="center">
                <span class="teal-text">Photo</span>Gallery
@@ -272,13 +382,45 @@
         </div>
   </div>
 
+```
 
 
 
+ **css**
+ 
+```css
+.slider .btn{
+    margin-top: 20px;
+}
+
+
+.section-search input{
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 90% !important;
+    border: #f4f4f4 3px solid !important;
+}
+
+.autocomplete-content{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.section-follow .fa-4x {
+    margin: 5px 10px;
+}
+
+```
+
+
+# Contact section
+
+```html
 <!-- section contact  -->
 
 
-  <section class="section section-contact scrollspy" id="contact">
+  <section class="section section-contact">
       <div class="container">
         <div class="row">
           <div class="col s12 m6">
@@ -326,60 +468,71 @@
         </div>
       </div>
   </section>
+```
 
 
 
 
+
+
+# Footer section
+
+```html
 <!--  Footer -->
-
 <footer class="section teal darken-2 white-text center">
   <p class="flow-text">Travelville &copy; 2019</p>
 </footer>
+```
+
+
+**css*
+
+```css
+.slider .btn{
+    margin-top: 20px;
+}
+
+
+.section-search input{
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 90% !important;
+    border: #f4f4f4 3px solid !important;
+}
+
+.autocomplete-content{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.section-follow .fa-4x {
+    margin: 5px 10px;
+}
 
 
 
 
 
-
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Custom JS & jQuery here
-    // INIT NAV
-      $('.button-collapse').sideNav();
-
-
-      //INIT SLIDER
-
-      $('.slider').slider({
-        indicators:false,
-        height:500,
-        transition:500,
-        interval:5500
-      })
-
-
-      $('.autocomplete').autocomplete({
-        data:{
-          "Aruba":null,
-          "Cancun Mexico":null,
-          "Hawaii":null,
-          "The bahamas":null,
-        }
-      });
-
-      $('scrollspy').scrollSpy();
-
-    });
-
-
-    // AUTOCOMPLETE
+.section-contact h5 {
+    margin-bottom: 30px;
+}
 
 
 
-  </script>
-</body>
 
-</html>
+
+```
+
+
+
+
+
+#  Scroll it!
+
+```html
+
+
+```
